@@ -54,6 +54,12 @@ const Page500 = () => import('@/views/pages/Page500')
 const Login = () => import('@/views/pages/Login')
 const Register = () => import('@/views/pages/Register')
 
+
+//VOG Controller
+
+const Index =  () => import('@/views/controller/index');
+const Plant =  () => import('@/views/controller/plant/index');
+
 // Users
 const Users = () => import('@/views/users/Users')
 const User = () => import('@/views/users/User')
@@ -68,6 +74,16 @@ function configRoutes() {
       name: 'Home',
       component: DefaultContainer,
       children: [
+        {
+          path: '/index',
+          name: 'index',
+          component: Index
+        },
+        {
+          path: '/plant',
+          name: 'Fábrica',
+          component: Plant
+        },
         {
           path: 'dashboard',
           name: 'Dashboard',

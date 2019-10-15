@@ -1,7 +1,37 @@
 export default {
   items: [
     {
-      name: 'Dashboard',
+      name: 'VogController',
+      icon: 'icon-shield',
+      children: [
+        {
+          name: 'Início',
+          url: '/index',
+          icon: 'icon-cursor'
+        },
+        {
+          name: 'Usuários',
+          icon: 'icon-user',
+          children: [
+            {
+              name: 'Cadastro',
+              url: '/plant',
+            },
+            {
+              name: 'Busca',
+              url: '/plant',
+            },
+          ]
+        },
+        {
+          name: 'Fábrica',
+          url: '/plant',
+          icon: 'icon-settings'
+        }
+      ]
+    },
+    {
+      name: 'Dashboard 98',
       url: '/dashboard',
       icon: 'icon-speedometer',
       badge: {
@@ -265,21 +295,6 @@ export default {
         text: 'NEW'
       },
       attributes: { disabled: true },
-    },
-    {
-      name: 'Download CoreUI',
-      url: 'http://coreui.io/vue/',
-      icon: 'icon-cloud-download',
-      class: 'mt-auto',
-      variant: 'success',
-      attributes: { target: '_blank', rel: 'noopener' }
-    },
-    {
-      name: 'Try CoreUI PRO',
-      url: 'http://coreui.io/pro/vue/',
-      icon: 'icon-layers',
-      variant: 'danger',
-      attributes: { target: '_blank', rel: 'noopener' }
-    },
+    }
   ]
 }
